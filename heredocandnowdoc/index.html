@@ -396,12 +396,12 @@
       
         <p>最近在维护一个古老的PHP网站，没有前后台的分离，代码看起来很吃力，上面大段大段的HTML输出。在看的时候发现很多地方用了「&lt;&lt;&lt;」这样的符号来标记字符串，好像之前学习PHP的时候，只讲了单双引号两种表示字符串的方式。今天偶然在书上看到了，这种「&lt;&lt;&lt;」表示字符串的方式是heredoc和nowdoc结构。</p>
 <a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">echo &lt;&lt;&lt;EOT</span><br><span class="line">   &lt;html&gt;</span><br><span class="line">   &lt;head&gt;&lt;title&gt;主页&lt;/title&gt;&lt;/head&gt;</span><br><span class="line">   &lt;body&gt;主页内容&lt;/body&gt;</span><br><span class="line">   &lt;/html&gt;</span><br><span class="line">EOT;</span><br></pre></td></tr></table></figure>
-<p>一般来说，如果一段字符串里面有引号的话，我们会使用「\”」来进行转义，PHP中单引号和双引号都可以表示字符串，因此也可以使用单引号表示字符串的开始和结束。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &apos;这里的&quot;双引号&quot;不用转义&apos;;</span><br></pre></td></tr></table></figure></p>
-<p>在HTML里面，标签的属性也使用了xxx=”yyy”的方式来表示。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;div-id&quot; class=&quot;div-class&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight bnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">echo <span class="attribute">&lt;&lt;&lt;EOT</span></span><br><span class="line"><span class="attribute">   &lt;html&gt;</span></span><br><span class="line">   <span class="attribute">&lt;head&gt;</span><span class="attribute">&lt;title&gt;</span>主页<span class="attribute">&lt;/title&gt;</span><span class="attribute">&lt;/head&gt;</span></span><br><span class="line">   <span class="attribute">&lt;body&gt;</span>主页内容<span class="attribute">&lt;/body&gt;</span></span><br><span class="line">   <span class="attribute">&lt;/html&gt;</span></span><br><span class="line">EOT;</span><br></pre></td></tr></table></figure>
+<p>一般来说，如果一段字符串里面有引号的话，我们会使用「\”」来进行转义，PHP中单引号和双引号都可以表示字符串，因此也可以使用单引号表示字符串的开始和结束。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">'这里的"双引号"不用转义'</span>;</span><br></pre></td></tr></table></figure></p>
+<p>在HTML里面，标签的属性也使用了xxx=”yyy”的方式来表示。<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="keyword">div</span> <span class="built_in">id</span>=<span class="string">"div-id"</span> <span class="built_in">class</span>=<span class="string">"div-class"</span>&gt;&lt;/<span class="keyword">div</span>&gt;</span><br></pre></td></tr></table></figure></p>
 <p>在输出大段HTML的时候，对所有双引号进行转义的工作量太大，而且对于维护不是很方便，经常出现引号没对齐的错误。通常我们会使用单引号来表示这种大段的里面有双引号的字符串。</p>
 <p>不过HTML里面，也是允许单引号表示属性的。如果在输出的HTML里面存在单双引号混用的情况，传统的单双引号字符串会比较麻烦，因此我们使用了heredoc模式来表示字符串。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo&lt;&lt;&lt;EOT</span><br><span class="line">   &lt;div id=&quot;div-id&quot; class=&quot;div-class&quot;&gt;$content&lt;/div&gt;</span><br><span class="line">EOT;</span><br></pre></td></tr></table></figure>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo&lt;&lt;&lt;EOT</span><br><span class="line">   &lt;<span class="keyword">div</span> <span class="built_in">id</span>=<span class="string">"div-id"</span> <span class="built_in">class</span>=<span class="string">"div-class"</span>&gt;$content&lt;/<span class="keyword">div</span>&gt;</span><br><span class="line">EOT;</span><br></pre></td></tr></table></figure>
 <p>如图所示，heredoc模式相当于另外定义了一个字符串结束标记EOT，在「&lt;&lt;&lt;EOT」和「EOT」之间的单双引号，都不会被当成字符串开始和结束标记。这对于我们格式化输出内容是很有用的。</p>
 <p>heredoc的使用具有如下特点：</p>
 <p>1、开始标记和结束标记使用相同的字符串，通常以大写字母来写。</p>
@@ -410,9 +410,9 @@
 <p>4、位于开始标记和结束标记之间的变量可以被正常解析，但是函数则不可以。在heredoc中，变量不需要用连接符「.」或「,」来拼接 。</p>
 <p>在PHP5.3.0及其以后的版本中增加了nowdoc结构，其用法和heredoc相同，不同的是nowdoc类似于单引号，不会解析开始标记和结束标记之间的变量，这种结构很适合用于嵌入 PHP 代码或其它大段文本而无需对其中的特殊字符进行转义。</p>
 <p>同样的之前的例子用nowdoc结构可以表示为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo&lt;&lt;&lt;&apos;EOT&apos;</span><br><span class="line">   &lt;div id=&quot;div-id&quot; class=&quot;div-class&quot;&gt;$content&lt;/div&gt;</span><br><span class="line">EOT;</span><br></pre></td></tr></table></figure>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo&lt;&lt;&lt;'EOT'</span><br><span class="line">   &lt;<span class="keyword">div</span> <span class="built_in">id</span>=<span class="string">"div-id"</span> <span class="built_in">class</span>=<span class="string">"div-class"</span>&gt;$content&lt;/<span class="keyword">div</span>&gt;</span><br><span class="line">EOT;</span><br></pre></td></tr></table></figure>
 <p>和heredoc结构用法唯一的区别就是开始标记用引号包起来，这里的$content会被原样输出而不会被解析成变量的值。</p>
-<p>在使用heredoc和nowdoc结构的时候，经常会遇到如下的报错：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Parse error: syntax error, unexpected T_SL in php</span><br></pre></td></tr></table></figure></p>
+<p>在使用heredoc和nowdoc结构的时候，经常会遇到如下的报错：<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Parse</span> <span class="keyword">error</span>: <span class="keyword">syntax</span> <span class="keyword">error</span>, unexpected T_SL <span class="keyword">in</span> php</span><br></pre></td></tr></table></figure></p>
 <p>一般产生这种问题的原因是定界符之后有空格引起的，例如上面的EOT后面有空格就会报这个错误。处理是否有空格还有一个小技巧，就是利用编辑器的代码提示功能，以我用的notepad++为例。</p>
 <p>正常的代码里面，整个heredoc结构字符串都是灰色的。</p>
 <p>（完）</p>
@@ -553,7 +553,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
