@@ -108,23 +108,25 @@
 
 
 
-  <meta name="description" content="Flutter 简介目前 Hybrid App 主要分为两类: (1) 通过 WebView 加载本地网页，App 相当于本地网站。如 PhoneGap、Cordova、IOnic。 (2) 原生控件的跨平台抽象，如 ReactNative、Weex。     Flutter 走了不一样的路：自己开发了一套原生控件，每个平台实现一遍，然后把渲染引擎（这套控件）打包在每个应用里面，因此性能没有问题，">
+  <meta name="description" content="Flutter 起源2015年，为了解决 Android 经常因不流畅和卡顿而遭人诟病的问题，Google  内部测试了一种高性能编程方式，那就是 Google 的 Sky 项目。Sky 项目使用网页开发语言 Dart 开发原生 Android 应用，强调应用的运行速度和与 Web 的高度集成。 可以说 Sky 是 Flutter 框架的前身。 在 2017年的谷歌 I/O大会上，Google 推">
 <meta name="keywords" content="Flutter">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Flutter VS React Native">
 <meta property="og:url" content="http://blog.cc-lab.cn/flutter-vs-reactnative/index.html">
 <meta property="og:site_name" content="好">
-<meta property="og:description" content="Flutter 简介目前 Hybrid App 主要分为两类: (1) 通过 WebView 加载本地网页，App 相当于本地网站。如 PhoneGap、Cordova、IOnic。 (2) 原生控件的跨平台抽象，如 ReactNative、Weex。     Flutter 走了不一样的路：自己开发了一套原生控件，每个平台实现一遍，然后把渲染引擎（这套控件）打包在每个应用里面，因此性能没有问题，">
+<meta property="og:description" content="Flutter 起源2015年，为了解决 Android 经常因不流畅和卡顿而遭人诟病的问题，Google  内部测试了一种高性能编程方式，那就是 Google 的 Sky 项目。Sky 项目使用网页开发语言 Dart 开发原生 Android 应用，强调应用的运行速度和与 Web 的高度集成。 可以说 Sky 是 Flutter 框架的前身。 在 2017年的谷歌 I/O大会上，Google 推">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://blog.cc-lab.cn/images/rncode.png">
+<meta property="og:image" content="http://blog.cc-lab.cn/images/dartcode.png">
 <meta property="og:image" content="http://blog.cc-lab.cn/images/react-native-arch.png">
 <meta property="og:image" content="http://blog.cc-lab.cn/images/flutter-arch.png">
 <meta property="og:image" content="http://blog.cc-lab.cn/images/60b65d96e143455080769e600a72d2f6.png">
 <meta property="og:image" content="http://blog.cc-lab.cn/images/43e854df1a2342d29435dfb401f95d2f.png">
-<meta property="og:updated_time" content="2018-07-19T06:06:06.729Z">
+<meta property="og:updated_time" content="2018-07-30T06:11:39.794Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Flutter VS React Native">
-<meta name="twitter:description" content="Flutter 简介目前 Hybrid App 主要分为两类: (1) 通过 WebView 加载本地网页，App 相当于本地网站。如 PhoneGap、Cordova、IOnic。 (2) 原生控件的跨平台抽象，如 ReactNative、Weex。     Flutter 走了不一样的路：自己开发了一套原生控件，每个平台实现一遍，然后把渲染引擎（这套控件）打包在每个应用里面，因此性能没有问题，">
-<meta name="twitter:image" content="http://blog.cc-lab.cn/images/react-native-arch.png">
+<meta name="twitter:description" content="Flutter 起源2015年，为了解决 Android 经常因不流畅和卡顿而遭人诟病的问题，Google  内部测试了一种高性能编程方式，那就是 Google 的 Sky 项目。Sky 项目使用网页开发语言 Dart 开发原生 Android 应用，强调应用的运行速度和与 Web 的高度集成。 可以说 Sky 是 Flutter 框架的前身。 在 2017年的谷歌 I/O大会上，Google 推">
+<meta name="twitter:image" content="http://blog.cc-lab.cn/images/rncode.png">
 
 
 
@@ -350,12 +352,24 @@
                 
               
 
-              <time title="创建时间：2018-07-19 11:20:00 / 修改时间：14:06:06" itemprop="dateCreated datePublished" datetime="2018-07-19T11:20:00+08:00">2018-07-19</time>
+              <time title="创建时间：2018-07-19 11:20:00" itemprop="dateCreated datePublished" datetime="2018-07-19T11:20:00+08:00">2018-07-19</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-07-30 14:11:39" itemprop="dateModified" datetime="2018-07-30T14:11:39+08:00">2018-07-30</time>
               
             
           </span>
@@ -406,10 +420,27 @@
       
 
       
-        <h4 id="Flutter-简介"><a href="#Flutter-简介" class="headerlink" title="Flutter 简介"></a>Flutter 简介</h4><p>目前 Hybrid App 主要分为两类: (1) 通过 WebView 加载本地网页，App 相当于本地网站。如 PhoneGap、Cordova、IOnic。 (2) 原生控件的跨平台抽象，如 ReactNative、Weex。    </p>
+        <h4 id="Flutter-起源"><a href="#Flutter-起源" class="headerlink" title="Flutter 起源"></a>Flutter 起源</h4><p>2015年，为了解决 Android 经常因不流畅和卡顿而遭人诟病的问题，Google  内部测试了一种高性能编程方式，那就是 Google 的 Sky 项目。Sky 项目使用网页开发语言 Dart 开发原生 Android 应用，强调应用的运行速度和与 Web 的高度集成。</p>
+<p>可以说 Sky 是 Flutter 框架的前身。</p>
+<p>在 2017年的谷歌 I/O大会上，Google 推出了 Flutter —— 一款新的用于创建移动应用的开源库。在2018年初世界移动大会上发布了 Flutter 的第一个 Beta 版本，2018年5月的 I/O 大会上更新到了 Beta3 版本，向正式版又迈进了一步。一时间业内对这个框架的关注度越来越高。</p>
+<h4 id="Flutter-简介"><a href="#Flutter-简介" class="headerlink" title="Flutter 简介"></a>Flutter 简介</h4><p>目前 Hybrid App 主要分为两类: (1) 通过 WebView 加载本地网页，App 相当于本地网站。如 PhoneGap、Cordova、IOnic。 (2) 原生控件的跨平台抽象，如 ReactNative、Weex。    </p>
 <p>Flutter 走了不一样的路：自己开发了一套原生控件，每个平台实现一遍，然后把渲染引擎（这套控件）打包在每个应用里面，因此性能没有问题，平台差异也很小。  </p>
 <a id="more"></a>
 <p>之所以不适用原生控件，是因为 Flutter 希望最终结果是更高质量的，如果 Flutter 使用原生系统 widget，Flutter 应用的质量和性能将受到这些 widget 本身质量的限制。  </p>
+<h4 id="Flutter-和-ReactNative-代码结构比较"><a href="#Flutter-和-ReactNative-代码结构比较" class="headerlink" title="Flutter 和 ReactNative 代码结构比较"></a>Flutter 和 ReactNative 代码结构比较</h4><table>
+<thead>
+<tr>
+<th>ReactNative</th>
+<th>Flutter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="/images/rncode.png" alt="image"></td>
+<td><img src="/images/dartcode.png" alt="image"></td>
+</tr>
+</tbody>
+</table>
 <h4 id="Flutter-和-ReactNative-底层架构的比较"><a href="#Flutter-和-ReactNative-底层架构的比较" class="headerlink" title="Flutter 和 ReactNative 底层架构的比较"></a>Flutter 和 ReactNative 底层架构的比较</h4><p><img src="/images/react-native-arch.png" alt="image"></p>
 <p><img src="/images/flutter-arch.png" alt="image"></p>
 <p>React-Native、Weex 核心是通过 Javascript 开发，执行时需要 Javascript 解释器，UI 是通过原生控件渲染。Flutter 与用于构建移动应用程序的其它大多数框架不同，因为 Flutter 既不使用 WebView，也不使用操作系统的原生控件。 相反，Flutter 使用自己的高性能渲染引擎来绘 制 widget。Flutter 使用 C、C ++、Dart 和 Skia（2D渲染引擎）构建。</p>
@@ -706,7 +737,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Flutter-简介"><span class="nav-number">1.</span> <span class="nav-text">Flutter 简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Flutter-和-ReactNative-底层架构的比较"><span class="nav-number">2.</span> <span class="nav-text">Flutter 和 ReactNative 底层架构的比较</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#UI-一致性"><span class="nav-number">3.</span> <span class="nav-text">UI 一致性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#动态化技术"><span class="nav-number">4.</span> <span class="nav-text">动态化技术</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#App体积"><span class="nav-number">5.</span> <span class="nav-text">App体积</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用案例"><span class="nav-number">6.</span> <span class="nav-text">使用案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三方Library数量"><span class="nav-number">7.</span> <span class="nav-text">第三方Library数量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Flutter的优势"><span class="nav-number">8.</span> <span class="nav-text">Flutter的优势</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Flutter目前的不足"><span class="nav-number">9.</span> <span class="nav-text">Flutter目前的不足</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考资料"><span class="nav-number">10.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Flutter-起源"><span class="nav-number">1.</span> <span class="nav-text">Flutter 起源</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Flutter-简介"><span class="nav-number">2.</span> <span class="nav-text">Flutter 简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Flutter-和-ReactNative-代码结构比较"><span class="nav-number">3.</span> <span class="nav-text">Flutter 和 ReactNative 代码结构比较</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Flutter-和-ReactNative-底层架构的比较"><span class="nav-number">4.</span> <span class="nav-text">Flutter 和 ReactNative 底层架构的比较</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#UI-一致性"><span class="nav-number">5.</span> <span class="nav-text">UI 一致性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#动态化技术"><span class="nav-number">6.</span> <span class="nav-text">动态化技术</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#App体积"><span class="nav-number">7.</span> <span class="nav-text">App体积</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用案例"><span class="nav-number">8.</span> <span class="nav-text">使用案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三方Library数量"><span class="nav-number">9.</span> <span class="nav-text">第三方Library数量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Flutter的优势"><span class="nav-number">10.</span> <span class="nav-text">Flutter的优势</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Flutter目前的不足"><span class="nav-number">11.</span> <span class="nav-text">Flutter目前的不足</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考资料"><span class="nav-number">12.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>

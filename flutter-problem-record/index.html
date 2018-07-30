@@ -116,13 +116,12 @@
 <meta property="og:site_name" content="好">
 <meta property="og:description" content="记录下使用 Flutter 中遇到的一些问题。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://blog.cc-lab.cn/images/42537497-b9bf979c-849d-11e8-931b-1808e8470daf.jpg">
 <meta property="og:image" content="http://blog.cc-lab.cn/images/WechatIMG12.png">
 <meta property="og:updated_time" content="2018-07-26T08:56:30.596Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Flutter 问题记录">
 <meta name="twitter:description" content="记录下使用 Flutter 中遇到的一些问题。">
-<meta name="twitter:image" content="http://blog.cc-lab.cn/images/42537497-b9bf979c-849d-11e8-931b-1808e8470daf.jpg">
+<meta name="twitter:image" content="http://blog.cc-lab.cn/images/WechatIMG12.png">
 
 
 
@@ -400,26 +399,13 @@
       
         <p>记录下使用 Flutter 中遇到的一些问题。</p>
 <a id="more"></a>
-<h4 id="VS-Code-64-bit-edition-version-1-25-0"><a href="#VS-Code-64-bit-edition-version-1-25-0" class="headerlink" title="[!] VS Code, 64-bit edition (version 1.25.0)"></a>[!] VS Code, 64-bit edition (version 1.25.0)</h4><p>执行 <code>flutter doctor</code> 时提示 VS Code 错误，但明明已经安装了相关程序。  </p>
-<p><img src="/images/42537497-b9bf979c-849d-11e8-931b-1808e8470daf.jpg" alt="image"></p>
-<p>通过 <code>flutter doctor -v</code> 可以看到更多的细节</p>
-<pre><code>[!] VS Code, 64-bit edition (version 1.25.0)
-    • VS Code at C:\Program Files\Microsoft VS Code
-    • Flutter extension not installed; install from  https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter
-</code></pre><p>目前 beta 版本的 Flutter 的 VS Code 插件检查存在 bug，忽略这个检查错误即可。</p>
-<blockquote>
-<p><a href="https://github.com/flutter/flutter/issues/19223" target="_blank" rel="noopener">https://github.com/flutter/flutter/issues/19223</a></p>
-</blockquote>
-<h4 id="Error-connecting-to-the-service-protocol-HttpException"><a href="#Error-connecting-to-the-service-protocol-HttpException" class="headerlink" title="Error connecting to the service protocol: HttpException"></a>Error connecting to the service protocol: HttpException</h4><p>在执行 <code>flutter run -d xxx</code> 时，应用可以启动，但 socket 连接报错，导致无法 hot reload 无法查看 logs 。</p>
-<pre><code>Launching lib/main.dart on iPhone in debug mode...
-Automatically signing iOS for device deployment using specified development team in Xcode project: 7QR8M344DV
-Starting Xcode build...
- ├─Assembling Flutter resources...                    1.2s
- └─Compiling, linking and signing...                  2.3s
-Xcode build done.                                            4.7s
-Installing and launching...                                 23.2s
-Error connecting to the service protocol: HttpException: , uri = http://127.0.0.1:8113/ws
-</code></pre><p>解决方法：<br>打开 XCODE - Window - Devices and Simulators，找到用来调试的设备<br>取消勾选 <code>Connect via network</code><br><img src="/images/WechatIMG12.png" alt="image"></p>
+<h4 id="VS-Code-64-bit-edition-version-1-25-0"><a href="#VS-Code-64-bit-edition-version-1-25-0" class="headerlink" title="[!] VS Code, 64-bit edition (version 1.25.0)"></a>[!] VS Code, 64-bit edition (version 1.25.0)</h4><p>执行 <figure class="highlight plain"><figcaption><span>doctor ``` 时提示 VS Code 错误，但明明已经安装了相关程序。  </span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">![image](/images/42537497-b9bf979c-849d-11e8-931b-1808e8470daf.jpg)</span><br><span class="line"></span><br><span class="line">通过 ``` flutter doctor -v ``` 可以看到更多的细节</span><br><span class="line"></span><br><span class="line">``` </span><br><span class="line">[!] VS Code, 64-bit edition (version 1.25.0)</span><br><span class="line">    • VS Code at C:\Program Files\Microsoft VS Code</span><br><span class="line">    • Flutter extension not installed; install from  https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">目前 beta 版本的 Flutter 的 VS Code 插件检查存在 bug，忽略这个检查错误即可。</span><br><span class="line"></span><br><span class="line">&gt; https://github.com/flutter/flutter/issues/19223</span><br><span class="line"></span><br><span class="line">#### Error connecting to the service protocol: HttpException</span><br><span class="line"></span><br><span class="line">在执行 ```flutter run -d xxx``` 时，应用可以启动，但 socket 连接报错，导致无法 hot reload 无法查看 logs 。</span><br></pre></td></tr></table></figure></p>
+<p>Launching lib/main.dart on iPhone in debug mode…<br>Automatically signing iOS for device deployment using specified development team in Xcode project: 7QR8M344DV<br>Starting Xcode build…<br> ├─Assembling Flutter resources…                    1.2s<br> └─Compiling, linking and signing…                  2.3s<br>Xcode build done.                                            4.7s<br>Installing and launching…                                 23.2s<br>Error connecting to the service protocol: HttpException: , uri = <a href="http://127.0.0.1:8113/ws" target="_blank" rel="noopener">http://127.0.0.1:8113/ws</a></p>
+<pre><code>
+解决方法：  
+打开 XCODE - Window - Devices and Simulators，找到用来调试的设备    
+取消勾选 ``` Connect via network
+</code></pre><p><img src="/images/WechatIMG12.png" alt="image"></p>
 
       
     </div>
@@ -654,7 +640,7 @@ Error connecting to the service protocol: HttpException: , uri = http://127.0.0.
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#VS-Code-64-bit-edition-version-1-25-0"><span class="nav-number">1.</span> <span class="nav-text">[!] VS Code, 64-bit edition (version 1.25.0)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Error-connecting-to-the-service-protocol-HttpException"><span class="nav-number">2.</span> <span class="nav-text">Error connecting to the service protocol: HttpException</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#VS-Code-64-bit-edition-version-1-25-0"><span class="nav-number">1.</span> <span class="nav-text">[!] VS Code, 64-bit edition (version 1.25.0)</span></a></li></ol></div>
             
 
           </div>
