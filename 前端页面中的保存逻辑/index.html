@@ -108,18 +108,18 @@
 
 
 
-  <meta name="description" content="今天一位朋友在群里问到一个问题「app 中设置界面修改设置的时候，每修改一项，就会触发 loading，导致用户体验不佳，如何避免？」  这是一个非常常见的「编辑 - 保存」页面，一般来说，这类页面的逻辑分成两种：一类是单独有个保存按钮进行保存；另一类是修改一项生效一项，无需额外保存。 单独按钮保存，常见于后台管理系统、或者是移动端的资料编辑页面上。以 Form 为单位，一次把所有内容提交到后台。">
+  <meta name="description" content="今天一位朋友在群里问到一个问题「app 中设置界面修改设置的时候，每修改一项，就会触发 loading，导致用户体验不佳，如何避免？」">
 <meta property="og:type" content="article">
 <meta property="og:title" content="前端页面中的保存逻辑">
 <meta property="og:url" content="http://blog.cc-lab.cn/前端页面中的保存逻辑/index.html">
 <meta property="og:site_name" content="好">
-<meta property="og:description" content="今天一位朋友在群里问到一个问题「app 中设置界面修改设置的时候，每修改一项，就会触发 loading，导致用户体验不佳，如何避免？」  这是一个非常常见的「编辑 - 保存」页面，一般来说，这类页面的逻辑分成两种：一类是单独有个保存按钮进行保存；另一类是修改一项生效一项，无需额外保存。 单独按钮保存，常见于后台管理系统、或者是移动端的资料编辑页面上。以 Form 为单位，一次把所有内容提交到后台。">
+<meta property="og:description" content="今天一位朋友在群里问到一个问题「app 中设置界面修改设置的时候，每修改一项，就会触发 loading，导致用户体验不佳，如何避免？」">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://blog.cc-lab.cn/images/kws_app.jpeg">
-<meta property="og:updated_time" content="2018-08-06T06:44:14.205Z">
+<meta property="og:updated_time" content="2018-08-06T06:45:46.102Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端页面中的保存逻辑">
-<meta name="twitter:description" content="今天一位朋友在群里问到一个问题「app 中设置界面修改设置的时候，每修改一项，就会触发 loading，导致用户体验不佳，如何避免？」  这是一个非常常见的「编辑 - 保存」页面，一般来说，这类页面的逻辑分成两种：一类是单独有个保存按钮进行保存；另一类是修改一项生效一项，无需额外保存。 单独按钮保存，常见于后台管理系统、或者是移动端的资料编辑页面上。以 Form 为单位，一次把所有内容提交到后台。">
+<meta name="twitter:description" content="今天一位朋友在群里问到一个问题「app 中设置界面修改设置的时候，每修改一项，就会触发 loading，导致用户体验不佳，如何避免？」">
 <meta name="twitter:image" content="http://blog.cc-lab.cn/images/kws_app.jpeg">
 
 
@@ -346,7 +346,7 @@
                 
               
 
-              <time title="创建时间：2018-08-06 10:41:00 / 修改时间：14:44:14" itemprop="dateCreated datePublished" datetime="2018-08-06T10:41:00+08:00">2018-08-06</time>
+              <time title="创建时间：2018-08-06 10:41:00 / 修改时间：14:45:46" itemprop="dateCreated datePublished" datetime="2018-08-06T10:41:00+08:00">2018-08-06</time>
             
 
             
@@ -403,6 +403,7 @@
 
       
         <p>今天一位朋友在群里问到一个问题「app 中设置界面修改设置的时候，每修改一项，就会触发 loading，导致用户体验不佳，如何避免？」</p>
+<a id="more"></a>
 <p><img src="/images/kws_app.jpeg" alt="image"></p>
 <p>这是一个非常常见的「编辑 - 保存」页面，一般来说，这类页面的逻辑分成两种：一类是单独有个保存按钮进行保存；另一类是修改一项生效一项，无需额外保存。</p>
 <p>单独按钮保存，常见于后台管理系统、或者是移动端的资料编辑页面上。以 Form 为单位，一次把所有内容提交到后台。单独设置保存按钮，我们可以在保存逻辑执行前通过弹窗，让用户对操作进行确认，通过点击「保存」或者「取消」，来让用户决定是否执行保存。试想，对于一个编辑用户页面，如果走的是立即生效的逻辑，很可能我们无意间的一些随意的修改，就把数据改掉了，比如无意间删除了用户名字中的一个字，除非我们记得这个字是什么然后手动改回来，我们是无法「撤销」我们的操作的。另外，对于一些依赖于其他输入项的表单验证行为，我们也需要当用户修改完所有项目后，统一进行验证和提交服务器，例如修改密码页面。  </p>
