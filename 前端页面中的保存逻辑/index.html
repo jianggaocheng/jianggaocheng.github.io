@@ -108,24 +108,26 @@
 
 
 
-  <meta name="description" content="单位的电子邮件最大只能发5MB的附件，因此在发送文件的时候，经常会使用压缩软件把附件进行压缩分卷，一个大的附件经常会分成十几甚至几十个小文件。在压缩的时候想起了很久以前思考的一个问题： 数据能不能被无限压缩？">
+  <meta name="description" content="今天一位朋友在群里问到一个问题「app 中设置界面修改设置的时候，每修改一项，就会触发 loading，导致用户体验不佳，如何避免？」  这是一个非常常见的「编辑 - 保存」页面，一般来说，这类页面的逻辑分成两种：一类是单独有个保存按钮进行保存；另一类是修改一项生效一项，无需额外保存。 单独按钮保存，常见于后台管理系统、或者是移动端的资料编辑页面上。以 Form 为单位，一次把所有内容提交到后台。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据压缩的极限">
-<meta property="og:url" content="http://blog.cc-lab.cn/compression/index.html">
+<meta property="og:title" content="前端页面中的保存逻辑">
+<meta property="og:url" content="http://blog.cc-lab.cn/前端页面中的保存逻辑/index.html">
 <meta property="og:site_name" content="好">
-<meta property="og:description" content="单位的电子邮件最大只能发5MB的附件，因此在发送文件的时候，经常会使用压缩软件把附件进行压缩分卷，一个大的附件经常会分成十几甚至几十个小文件。在压缩的时候想起了很久以前思考的一个问题： 数据能不能被无限压缩？">
+<meta property="og:description" content="今天一位朋友在群里问到一个问题「app 中设置界面修改设置的时候，每修改一项，就会触发 loading，导致用户体验不佳，如何避免？」  这是一个非常常见的「编辑 - 保存」页面，一般来说，这类页面的逻辑分成两种：一类是单独有个保存按钮进行保存；另一类是修改一项生效一项，无需额外保存。 单独按钮保存，常见于后台管理系统、或者是移动端的资料编辑页面上。以 Form 为单位，一次把所有内容提交到后台。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-13T02:33:26.631Z">
+<meta property="og:image" content="http://blog.cc-lab.cn/images/kws_app.jpeg">
+<meta property="og:updated_time" content="2018-08-06T06:44:14.205Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数据压缩的极限">
-<meta name="twitter:description" content="单位的电子邮件最大只能发5MB的附件，因此在发送文件的时候，经常会使用压缩软件把附件进行压缩分卷，一个大的附件经常会分成十几甚至几十个小文件。在压缩的时候想起了很久以前思考的一个问题： 数据能不能被无限压缩？">
+<meta name="twitter:title" content="前端页面中的保存逻辑">
+<meta name="twitter:description" content="今天一位朋友在群里问到一个问题「app 中设置界面修改设置的时候，每修改一项，就会触发 loading，导致用户体验不佳，如何避免？」  这是一个非常常见的「编辑 - 保存」页面，一般来说，这类页面的逻辑分成两种：一类是单独有个保存按钮进行保存；另一类是修改一项生效一项，无需额外保存。 单独按钮保存，常见于后台管理系统、或者是移动端的资料编辑页面上。以 Form 为单位，一次把所有内容提交到后台。">
+<meta name="twitter:image" content="http://blog.cc-lab.cn/images/kws_app.jpeg">
 
 
 
 
 
 
-  <link rel="canonical" href="http://blog.cc-lab.cn/compression/"/>
+  <link rel="canonical" href="http://blog.cc-lab.cn/前端页面中的保存逻辑/"/>
 
 
 
@@ -135,7 +137,7 @@
   };
 </script>
 
-  <title>数据压缩的极限 | 好</title>
+  <title>前端页面中的保存逻辑 | 好</title>
   
 
 
@@ -302,7 +304,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.cc-lab.cn/compression/">
+    <link itemprop="mainEntityOfPage" href="http://blog.cc-lab.cn/前端页面中的保存逻辑/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="蒋杲程">
@@ -319,7 +321,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">数据压缩的极限
+          <h2 class="post-title" itemprop="name headline">前端页面中的保存逻辑
               
             
           </h2>
@@ -344,28 +346,34 @@
                 
               
 
-              <time title="创建时间：2015-02-18 19:15:10" itemprop="dateCreated datePublished" datetime="2015-02-18T19:15:10+08:00">2015-02-18</time>
+              <time title="创建时间：2018-08-06 10:41:00 / 修改时间：14:44:14" itemprop="dateCreated datePublished" datetime="2018-08-06T10:41:00+08:00">2018-08-06</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-07-13 10:33:26" itemprop="dateModified" datetime="2018-07-13T10:33:26+08:00">2018-07-13</time>
               
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/前端/" itemprop="url" rel="index"><span itemprop="name">前端</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -394,18 +402,50 @@
       
 
       
-        <p>单位的电子邮件最大只能发5MB的附件，因此在发送文件的时候，经常会使用压缩软件把附件进行压缩分卷，一个大的附件经常会分成十几甚至几十个小文件。在压缩的时候想起了很久以前思考的一个问题：</p>
-<p>数据能不能被无限压缩？</p>
-<a id="more"></a>
-<p>在小学六年级电脑课教使用压缩软件的时候，老师说对已经压缩过的文件再压缩是没有效果的。实际生活中直觉告诉我们也是这样的：像程序代码之类的文本文件，压缩率很高，几十MB的文件经过压缩，有时候都不足5MB一封邮件就能发出去；而像JPG、MP3、RMVB这种文件，压缩后和压缩前基本看不出区别。我想，大概是因为JPG、MP3、RMVB都是已经被压缩过的文件格式，而代码文件是没有经过压缩的，所以才导致了两者压缩率的差异。</p>
-<p>随着后来上了大学，慢慢的对这个问题有了答案：<strong>数据是不能被无限压缩的。</strong></p>
-<p>计算机中1个bit有两种状态，0或者1。1个大小为n个bit的文件，包含了2^n种不同的0和1的组合顺序。假如说有一种压缩算法，压缩率可以达到50%。那么压缩后的文件，大小为n/2个bit，只能包含2 ^(n/2)种0和1的组合顺序，是无法将压缩前的2^n种排列表示完整的。</p>
-<p>本质上，压缩的原理其实就是用更精简的字符串去描述复杂的字符串。字符串的规律性越强，压缩的效果越好。</p>
-<p>“CCCCCCCC”可以用”8C”来表示，一下子就缩短了6个字符。</p>
-<p>相应的，内容越是随机没有规律，越是难被压缩，例如随机的字符串”LFSDHFA156″、π、还有上面例子里”CCCCCCCC”压缩后的”8C”。</p>
-<p>在英文里，常用的单词都是比较短小的，例如I、you、a、one、two等，而不怎么常用的单词，都是比较长的，例如biotransformation。我们背这些长的单词的时候，往往会把它分解成简单的一些单词的组合”bio”+”transform”+”tion”这样子来背。其实和数据压缩是大同小异的。顺便说下，这种把常用的单词用尽量少的字母来表达的方法，就是信息学中大名鼎鼎的「哈夫曼编码」的基本原理。</p>
-<p>说了这么多，其实就是想解释下，数据压缩只不过是把海绵中的水挤压出来，再怎么用力，都无法把海绵都挤的消失。</p>
-<p>（完）</p>
+        <p>今天一位朋友在群里问到一个问题「app 中设置界面修改设置的时候，每修改一项，就会触发 loading，导致用户体验不佳，如何避免？」</p>
+<p><img src="/images/kws_app.jpeg" alt="image"></p>
+<p>这是一个非常常见的「编辑 - 保存」页面，一般来说，这类页面的逻辑分成两种：一类是单独有个保存按钮进行保存；另一类是修改一项生效一项，无需额外保存。</p>
+<p>单独按钮保存，常见于后台管理系统、或者是移动端的资料编辑页面上。以 Form 为单位，一次把所有内容提交到后台。单独设置保存按钮，我们可以在保存逻辑执行前通过弹窗，让用户对操作进行确认，通过点击「保存」或者「取消」，来让用户决定是否执行保存。试想，对于一个编辑用户页面，如果走的是立即生效的逻辑，很可能我们无意间的一些随意的修改，就把数据改掉了，比如无意间删除了用户名字中的一个字，除非我们记得这个字是什么然后手动改回来，我们是无法「撤销」我们的操作的。另外，对于一些依赖于其他输入项的表单验证行为，我们也需要当用户修改完所有项目后，统一进行验证和提交服务器，例如修改密码页面。  </p>
+<p>而像手机的设置页面上，当我们设置屏幕亮度的时候，我们希望立即看到效果，而不是点击保存按钮，才能看到亮度变化了。我们也不希望修改这些非常基础的设置，系统还要我们确认是否确定我们的操作。因此对于希望能够即时看到修改效果，并且无需额外确认的页面，我们可以讲请求后台的逻辑放到onChange，或者onLostFocus的时候。</p>
+<p>回到最初的问题，朋友说的「每修改一项，就会触发loading」的情况，就是使用了无需保存按钮的方法，来设计的页面。<br>和手机上保存设置不同，app 里面的一些设置，是保存在服务器上的，每次改变设置，都需要去发起 API 调用，如果没有 loading， 当我们频繁的去切换设置，app 会连续发送多个请求到后台，给服务器造成压力，并且对于 Http 请求来说，如果没有设置 keep-alive，每次请求都会建立新的 TCP 连接，可能我们 app 上快速操作发送的请求是 开 关 开，到了服务器端的顺序变成了 开 开 关，导致设置与我们的想法相违背。通过加入 loading，实际是人为加了限制，必须在前一次 API 调用结束后，才可以发起下一次调用，减少服务器压力并防止频繁请求导致异常情况，loading 的伪代码如下：</p>
+<pre><code>
+if (!loading) {
+    loading = true;
+    await queryBackend(args);
+    loading = false;
+}
+
+</code></pre><p>很多表单页面，也会在提交的时候，将 submit 按钮给禁用，避免重复点击造成数据异常。<br>但对于立即生效式的表单，频繁的 loading 就像每修改一项就弹出 confirm 一样的让人反感，在开发中，我们可以通过函数的节流（throttle）和防抖（debounce），来实现逻辑的优化，总的来说，节流和防抖都是在时间轴上控制执行的次数。</p>
+<p>节流（throttle）<br>让一个函数无法在很短的时间间隔内连续调用，当上一次函数执行后过了规定的时间间隔，才能进行下一次该函数的调用。<br>节流逻辑的伪代码如下</p>
+<pre><code>function throttle(method, time){
+    var timer = null;
+    var startTime = new Date();
+    return function(){
+        var context = this;
+        var endTime = new Date();
+        var resTime = endTime - startTime;
+        //判断大于等于我们给的时间采取执行函数;
+        if(resTime &gt;= time){
+            method.call(context);
+            //执行完函数之后重置初始时间，等于最后一次触发的时间
+            startTime = endTime;
+        }
+    }
+}
+</code></pre><p>防抖（debounce）<br>让一个函数在一定间隔内没有被调用时，才开始执行被调用方法。<br>防抖逻辑的伪代码付下</p>
+<pre><code>function debounce(method,time){
+    var timer = null ;
+    return function(){
+        var context = this;
+        //在函数执行的时候先清除timer定时器;
+        clearTimeout(timer);
+        timer = setTimeout(function(){
+            method.call(context);
+        },time);
+    }
+}
+
+</code></pre><p>具体是该用防抖还是节流，要看具体的场景，假如说我们需要在页面上调节一盏灯光的亮度，通过节流，我们可以在边调节边看到灯光明暗的变化，如果使用了防抖，这意味着只有当我们停止了调节，灯光才会产生变化。假如说我们调节的是一个温度旋钮，比如把空调温度从 22° 调节到 26°，我们不需要将 23°、24°、25°这些中间的状态发送给服务器，只需要最终的设置，这种时候防抖就更适合了。</p>
 
       
     </div>
@@ -457,8 +497,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/jsonpstudy/" rel="next" title="JSONP的一点个人理解">
-                <i class="fa fa-chevron-left"></i> JSONP的一点个人理解
+              <a href="/flutter-problem-record/" rel="next" title="Flutter 问题记录">
+                <i class="fa fa-chevron-left"></i> Flutter 问题记录
               </a>
             
           </div>
@@ -466,10 +506,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/heredocandnowdoc/" rel="prev" title="PHP中字符串的heredoc结构和nowdoc结构">
-                PHP中字符串的heredoc结构和nowdoc结构 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
