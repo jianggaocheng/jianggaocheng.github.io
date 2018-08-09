@@ -112,18 +112,18 @@
 
 
 
-  <meta name="description" content="今天使用hexo-admin进行编辑博客的时候，/admin 页面无法加载，console 报了MIMI type (&amp;#39;text/html&amp;#39;) is not supported 的错误。  重装hexo-admin问题依旧。这个问题的直接原因是浏览器认为加载css、js文件时候，文件的 MIMI 和预期的不符导致的，直接在浏览器访问报错的 bundle文件，发现是文件不存在导致的（">
+  <meta name="description" content="今天使用hexo-admin进行编辑博客的时候，/admin 页面无法加载，console 报了MIMI type (&amp;#39;text/html&amp;#39;) is not supported 的错误。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo-admin MIMI type (&#39;text&#x2F;html&#39;) is not supported 解决方案">
 <meta property="og:url" content="https://www.cc-lab.cn/hexo-admin-mime-not-supported/index.html">
 <meta property="og:site_name" content="好">
-<meta property="og:description" content="今天使用hexo-admin进行编辑博客的时候，/admin 页面无法加载，console 报了MIMI type (&amp;#39;text/html&amp;#39;) is not supported 的错误。  重装hexo-admin问题依旧。这个问题的直接原因是浏览器认为加载css、js文件时候，文件的 MIMI 和预期的不符导致的，直接在浏览器访问报错的 bundle文件，发现是文件不存在导致的（">
+<meta property="og:description" content="今天使用hexo-admin进行编辑博客的时候，/admin 页面无法加载，console 报了MIMI type (&amp;#39;text/html&amp;#39;) is not supported 的错误。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://www.cc-lab.cn/images/hexo-admin-mime.png">
-<meta property="og:updated_time" content="2018-08-09T08:37:37.337Z">
+<meta property="og:updated_time" content="2018-08-09T08:38:32.346Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo-admin MIMI type (&#39;text&#x2F;html&#39;) is not supported 解决方案">
-<meta name="twitter:description" content="今天使用hexo-admin进行编辑博客的时候，/admin 页面无法加载，console 报了MIMI type (&amp;#39;text/html&amp;#39;) is not supported 的错误。  重装hexo-admin问题依旧。这个问题的直接原因是浏览器认为加载css、js文件时候，文件的 MIMI 和预期的不符导致的，直接在浏览器访问报错的 bundle文件，发现是文件不存在导致的（">
+<meta name="twitter:description" content="今天使用hexo-admin进行编辑博客的时候，/admin 页面无法加载，console 报了MIMI type (&amp;#39;text/html&amp;#39;) is not supported 的错误。">
 <meta name="twitter:image" content="https://www.cc-lab.cn/images/hexo-admin-mime.png">
 
 
@@ -350,7 +350,7 @@
                 
               
 
-              <time title="创建时间：2018-08-09 16:04:35 / 修改时间：16:37:37" itemprop="dateCreated datePublished" datetime="2018-08-09T16:04:35+08:00">2018-08-09</time>
+              <time title="创建时间：2018-08-09 16:04:35 / 修改时间：16:38:32" itemprop="dateCreated datePublished" datetime="2018-08-09T16:04:35+08:00">2018-08-09</time>
             
 
             
@@ -390,6 +390,7 @@
       
         <p>今天使用<code>hexo-admin</code>进行编辑博客的时候，/admin 页面无法加载，console 报了<code>MIMI type (&#39;text/html&#39;) is not supported</code> 的错误。</p>
 <p><img src="/images/hexo-admin-mime.png" alt="image"></p>
+<a id="more"></a>
 <p>重装<code>hexo-admin</code>问题依旧。<br>这个问题的直接原因是浏览器认为加载css、js文件时候，文件的 MIMI 和预期的不符导致的，直接在浏览器访问报错的 bundle文件，发现是文件不存在导致的（文件不存在时会返回一个文字信息，这个文字消息被style 和 script 引用时候，就会出现这样的错误，相当于加载 js/css 时候选择了一个 html 文件）。</p>
 <p>定位到了问题，解决方法就明确了，进入到插件目录，执行<code>gulp</code> 重新打包生成 bundle 文件即可。</p>
 <pre><code>[16:01:18] Using gulpfile ~/Documents/private/hexo-blog/node_modules/hexo-admin-ehc/gulpfile.js
