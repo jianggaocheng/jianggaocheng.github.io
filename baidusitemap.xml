@@ -4,6 +4,22 @@
 
     
   <url>
+    <loc>https://www.cc-lab.cn/hexo-admin-mime-not-supported/</loc>
+    <lastmod>2018-08-09T08:37:37.337Z</lastmod>
+    <data>
+        <display>
+        <title>hexo-admin MIMI type ('text/html') is not supported 解决方案</title>
+        <pubTime>2018-08-09T08:04:35.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
     <loc>https://www.cc-lab.cn/throttle-debounce/</loc>
     <lastmod>2018-08-06T06:48:31.950Z</lastmod>
     <data>
@@ -20,7 +36,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>https://www.cc-lab.cn/flutter-problem-record/</loc>
