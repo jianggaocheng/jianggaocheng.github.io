@@ -5,12 +5,31 @@
     
   <url>
     <loc>https://www.cc-lab.cn/30-days-of-flutter/</loc>
-    <lastmod>2018-08-17T07:30:40.798Z</lastmod>
+    <lastmod>2018-08-27T02:38:40.309Z</lastmod>
     <data>
         <display>
         <title>30 days of flutter</title>
-        <pubTime>2018-08-17T07:28:24.000Z</pubTime>
+        <pubTime>2018-08-17T07:28:00.000Z</pubTime>
         
+        <tag>Flutter</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.cc-lab.cn/flutter-problem-record/</loc>
+    <lastmod>2018-08-27T02:37:23.516Z</lastmod>
+    <data>
+        <display>
+        <title>Flutter 问题记录</title>
+        <pubTime>2018-08-27T02:37:00.000Z</pubTime>
+        
+        <tag>Flutter</tag>
+         
          
            
         </display>
@@ -47,23 +66,6 @@
              
               <breadCrumb title="前端" url="https://www.cc-lab.cn/categories/%E5%89%8D%E7%AB%AF/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.cc-lab.cn/flutter-problem-record/</loc>
-    <lastmod>2018-08-06T01:16:46.109Z</lastmod>
-    <data>
-        <display>
-        <title>Flutter 问题记录</title>
-        <pubTime>2018-07-25T05:45:00.000Z</pubTime>
-        
-        <tag>Flutter</tag>
-         
-         
-           
         </display>
     </data>
     </url>
