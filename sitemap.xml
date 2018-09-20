@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.cc-lab.cn/list_p12_keytool/</loc>
+    
+    <lastmod>2018-09-20T08:46:08.711Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.cc-lab.cn/30-days-of-flutter/</loc>
     
     <lastmod>2018-08-27T02:38:40.309Z</lastmod>
@@ -65,14 +72,14 @@
   </url>
   
   <url>
-    <loc>https://www.cc-lab.cn/jsonpstudy/</loc>
+    <loc>https://www.cc-lab.cn/about/index.html</loc>
     
     <lastmod>2018-07-13T02:33:26.632Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.cc-lab.cn/about/index.html</loc>
+    <loc>https://www.cc-lab.cn/jsonpstudy/</loc>
     
     <lastmod>2018-07-13T02:33:26.632Z</lastmod>
     
