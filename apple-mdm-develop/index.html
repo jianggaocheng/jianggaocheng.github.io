@@ -113,26 +113,24 @@
 
 
 
-  <meta name="description" content="今天一位朋友在群里问到一个问题「app 中设置界面修改设置的时候，每修改一项，就会触发 loading，导致用户体验不佳，如何避免？」">
+  <meta name="description" content="MDM VendorMDM Vendor 指提供 MDM 服务的角色，比如 AirWatch 就是一个 MDM Vendor，要成为一个 MDM Vendor 需要有企业版开发者账号，然后去 apple 那里申请 mdm vendor 证书（有效期一年）。MDM Vendor 证书可以用来签名 MDM Customer 证书的 csr 文件。  MDM CustomerMDM Customer 指">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端页面中的保存逻辑">
-<meta property="og:url" content="https://www.cc-lab.cn/throttle-debounce/index.html">
+<meta property="og:title" content="Apple MDM 开发">
+<meta property="og:url" content="https://www.cc-lab.cn/apple-mdm-develop/index.html">
 <meta property="og:site_name" content="好">
-<meta property="og:description" content="今天一位朋友在群里问到一个问题「app 中设置界面修改设置的时候，每修改一项，就会触发 loading，导致用户体验不佳，如何避免？」">
+<meta property="og:description" content="MDM VendorMDM Vendor 指提供 MDM 服务的角色，比如 AirWatch 就是一个 MDM Vendor，要成为一个 MDM Vendor 需要有企业版开发者账号，然后去 apple 那里申请 mdm vendor 证书（有效期一年）。MDM Vendor 证书可以用来签名 MDM Customer 证书的 csr 文件。  MDM CustomerMDM Customer 指">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://www.cc-lab.cn/images/kws_app.jpeg">
-<meta property="og:updated_time" content="2018-08-06T06:48:31.950Z">
+<meta property="og:updated_time" content="2019-01-24T05:29:35.465Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端页面中的保存逻辑">
-<meta name="twitter:description" content="今天一位朋友在群里问到一个问题「app 中设置界面修改设置的时候，每修改一项，就会触发 loading，导致用户体验不佳，如何避免？」">
-<meta name="twitter:image" content="https://www.cc-lab.cn/images/kws_app.jpeg">
+<meta name="twitter:title" content="Apple MDM 开发">
+<meta name="twitter:description" content="MDM VendorMDM Vendor 指提供 MDM 服务的角色，比如 AirWatch 就是一个 MDM Vendor，要成为一个 MDM Vendor 需要有企业版开发者账号，然后去 apple 那里申请 mdm vendor 证书（有效期一年）。MDM Vendor 证书可以用来签名 MDM Customer 证书的 csr 文件。  MDM CustomerMDM Customer 指">
 
 
 
 
 
 
-  <link rel="canonical" href="https://www.cc-lab.cn/throttle-debounce/"/>
+  <link rel="canonical" href="https://www.cc-lab.cn/apple-mdm-develop/"/>
 
 
 
@@ -142,7 +140,7 @@
   };
 </script>
 
-  <title>前端页面中的保存逻辑 | 好 - 好好学习，天天向上。——蒋杲程的个人网站</title>
+  <title>Apple MDM 开发 | 好 - 好好学习，天天向上。——蒋杲程的个人网站</title>
   
 
 
@@ -309,7 +307,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.cc-lab.cn/throttle-debounce/">
+    <link itemprop="mainEntityOfPage" href="https://www.cc-lab.cn/apple-mdm-develop/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="蒋杲程">
@@ -326,7 +324,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">前端页面中的保存逻辑
+          <h2 class="post-title" itemprop="name headline">Apple MDM 开发
               
             
           </h2>
@@ -351,7 +349,7 @@
                 
               
 
-              <time title="创建时间：2018-08-06 10:41:00 / 修改时间：14:48:31" itemprop="dateCreated datePublished" datetime="2018-08-06T10:41:00+08:00">2018-08-06</time>
+              <time title="创建时间：2019-01-24 10:01:16 / 修改时间：13:29:35" itemprop="dateCreated datePublished" datetime="2019-01-24T10:01:16+08:00">2019-01-24</time>
             
 
             
@@ -361,24 +359,6 @@
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/前端/" itemprop="url" rel="index"><span itemprop="name">前端</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -407,51 +387,77 @@
       
 
       
-        <p>今天一位朋友在群里问到一个问题「app 中设置界面修改设置的时候，每修改一项，就会触发 loading，导致用户体验不佳，如何避免？」</p>
+        <h3 id="MDM-Vendor"><a href="#MDM-Vendor" class="headerlink" title="MDM Vendor"></a>MDM Vendor</h3><p>MDM Vendor 指提供 MDM 服务的角色，比如 AirWatch 就是一个 MDM Vendor，要成为一个 MDM Vendor 需要有企业版开发者账号，然后去 apple 那里申请 mdm vendor 证书（有效期一年）。MDM Vendor 证书可以用来签名 MDM Customer 证书的 csr 文件。 </p>
+<h3 id="MDM-Customer"><a href="#MDM-Customer" class="headerlink" title="MDM Customer"></a>MDM Customer</h3><p>MDM Customer 指使用 MDM 进行设备管理的角色，比如某公司使用了 AirWatch 的 MDM 服务，那么它就是一个 MDM Customer。</p>
 <a id="more"></a>
-<p><img src="/images/kws_app.jpeg" alt="image"></p>
-<p>这是一个非常常见的「编辑 - 保存」页面，一般来说，这类页面的逻辑分成两种：一类是单独有个保存按钮进行保存；另一类是修改一项生效一项，无需额外保存。</p>
-<p>单独按钮保存，常见于后台管理系统、或者是移动端的资料编辑页面上。以 Form 为单位，一次把所有内容提交到后台。单独设置保存按钮，我们可以在保存逻辑执行前通过弹窗，让用户对操作进行确认，通过点击「保存」或者「取消」，来让用户决定是否执行保存。试想，对于一个编辑用户页面，如果走的是立即生效的逻辑，很可能我们无意间的一些随意的修改，就把数据改掉了，比如无意间删除了用户名字中的一个字，除非我们记得这个字是什么然后手动改回来，我们是无法「撤销」我们的操作的。另外，对于一些依赖于其他输入项的表单验证行为，我们也需要当用户修改完所有项目后，统一进行验证和提交服务器，例如修改密码页面。  </p>
-<p>而像手机的设置页面上，当我们设置屏幕亮度的时候，我们希望立即看到效果，而不是点击保存按钮，才能看到亮度变化了。我们也不希望修改这些非常基础的设置，系统还要我们确认是否确定我们的操作。因此对于希望能够即时看到修改效果，并且无需额外确认的页面，我们可以讲请求后台的逻辑放到onChange，或者onLostFocus的时候。</p>
-<p>回到最初的问题，朋友说的「每修改一项，就会触发loading」的情况，就是使用了无需保存按钮的方法，来设计的页面。<br>和手机上保存设置不同，app 里面的一些设置，是保存在服务器上的，每次改变设置，都需要去发起 API 调用，如果没有 loading， 当我们频繁的去切换设置，app 会连续发送多个请求到后台，给服务器造成压力，并且对于 Http 请求来说，如果没有设置 keep-alive，每次请求都会建立新的 TCP 连接，可能我们 app 上快速操作发送的请求是 开 关 开，到了服务器端的顺序变成了 开 开 关，导致设置与我们的想法相违背。通过加入 loading，实际是人为加了限制，必须在前一次 API 调用结束后，才可以发起下一次调用，减少服务器压力并防止频繁请求导致异常情况，loading 的伪代码如下：</p>
-<pre><code>
-if (!loading) {
-    loading = true;
-    await queryBackend(args);
-    loading = false;
-}
-
-</code></pre><p>很多表单页面，也会在提交的时候，将 submit 按钮给禁用，避免重复点击造成数据异常。<br>但对于立即生效式的表单，频繁的 loading 就像每修改一项就弹出 confirm 一样的让人反感，在开发中，我们可以通过函数的节流（throttle）和防抖（debounce），来实现逻辑的优化，总的来说，节流和防抖都是在时间轴上控制执行的次数。</p>
-<p>节流（throttle）<br>让一个函数无法在很短的时间间隔内连续调用，当上一次函数执行后过了规定的时间间隔，才能进行下一次该函数的调用。<br>节流逻辑的伪代码如下</p>
-<pre><code>function throttle(method, time){
-    var timer = null;
-    var startTime = new Date();
-    return function(){
-        var context = this;
-        var endTime = new Date();
-        var resTime = endTime - startTime;
-        //判断大于等于我们给的时间采取执行函数;
-        if(resTime &gt;= time){
-            method.call(context);
-            //执行完函数之后重置初始时间，等于最后一次触发的时间
-            startTime = endTime;
-        }
-    }
-}
-</code></pre><p>防抖（debounce）<br>让一个函数在一定间隔内没有被调用时，才开始执行被调用方法。<br>防抖逻辑的伪代码付下</p>
-<pre><code>function debounce(method,time){
-    var timer = null ;
-    return function(){
-        var context = this;
-        //在函数执行的时候先清除timer定时器;
-        clearTimeout(timer);
-        timer = setTimeout(function(){
-            method.call(context);
-        },time);
-    }
-}
-
-</code></pre><p>具体是该用防抖还是节流，要看具体的场景，假如说我们需要在页面上调节一盏灯光的亮度，通过节流，我们可以在边调节边看到灯光明暗的变化，如果使用了防抖，这意味着只有当我们停止了调节，灯光才会产生变化。假如说我们调节的是一个温度旋钮，比如把空调温度从 22° 调节到 26°，我们不需要将 23°、24°、25°这些中间的状态发送给服务器，只需要最终的设置，这种时候防抖就更适合了。</p>
+<h3 id="MDM-涉及到的证书"><a href="#MDM-涉及到的证书" class="headerlink" title="MDM 涉及到的证书"></a>MDM 涉及到的证书</h3><ul>
+<li>MDM Vendor 证书，由我们自己去 apple 生成</li>
+<li>MDM Customer 证书，由我们生成 csr，然后客户去 apple 那里生成并交给我们，用来和 APNS 通信给设备发送推送通知</li>
+<li>SCEP 证书，用来签发设备身份证书的 CA 证书</li>
+<li>设备身份证书，由我们给设备的用来标识设备身份的证书</li>
+</ul>
+<h3 id="MDM-描述文件"><a href="#MDM-描述文件" class="headerlink" title="MDM 描述文件"></a>MDM 描述文件</h3><p>设备通过安装一个描述文件来成为 MDM 受控设备，描述文件通常以 .mobileconfig 后缀，描述文件用来保存一组设备的配置策略，以便批量部署（如将 VPN 的配置写入描述文件，就可以通过给设备安装描述文件来批量快速的为设备配置 VPN），MDM 的配置也是写在描述文件的，可以通过 Apple Configurator 2 来生成描述文件，可以手动编写。<br>一个 MDM 描述文件最少需要包含两部分内容：</p>
+<h4 id="设备身份证书"><a href="#设备身份证书" class="headerlink" title="设备身份证书"></a>设备身份证书</h4><p>当设备 enroll 成为一个受控设备的时候，会安装一个设备身份证书（Device Identify Certificate），这个设备身份证书用来标识设备，可以通过直接在 MDM mobileconfig 文件中嵌入 PKCS#12 来为设备产生证书，也可以通过 SCEP 协议来为设备颁发证书。一般建议使用 SCEP，PKCS#12 会在服务器端产生公私钥，而 SCEP 协议是由设备产生公私钥然后将公钥给服务器签名生成证书，安全性更强。</p>
+<h4 id="MDM-payload"><a href="#MDM-payload" class="headerlink" title="MDM payload"></a>MDM payload</h4><p>MDM payload 主要定义了和设备通信的 MDM server 的地址。</p>
+<p>默认的描述文件是没有经过数字签名的，安装到设备上会显示未签名，可以通过添加数字签名来让其成为签名的描述文件（任意的证书私钥进行签名皆可）。</p>
+<h3 id="Supervisor-Mode"><a href="#Supervisor-Mode" class="headerlink" title="Supervisor Mode"></a>Supervisor Mode</h3><p>普通的设备 enroll 成为 MDM 受控设备之后，MDM Server 下发一些控制指令，比如安装应用等，需要在设备上进行二次确认，我们可以把一台设备设置成被监督模式（Supervisor Mode），被监督的设备会静默执行安装应用等指令，可以通过 Apple Configurator 2 来将设备编程被监督设备。</p>
+<blockquote>
+<p>!!! 成为被监督设备会清空设备所有内容，同时一些低版本 iOS，如 iOS8 会被要求强制升级到新版 iOS !!!<br>!!! 成为被监督设备会清空设备所有内容，同时一些低版本 iOS，如 iOS8 会被要求强制升级到新版 iOS !!!<br>!!! 成为被监督设备会清空设备所有内容，同时一些低版本 iOS，如 iOS8 会被要求强制升级到新版 iOS !!!  </p>
+</blockquote>
+<h3 id="MDM-通信流程"><a href="#MDM-通信流程" class="headerlink" title="MDM 通信流程"></a>MDM 通信流程</h3><p>MDM Server 和设备的通信主要通过三个URL：</p>
+<ul>
+<li>scep: 给设备签发设备身份证书 （可选）</li>
+<li>check in: 接收设备 enroll 鉴权，设备 token 更新，设备退出管理这三个事件  </li>
+<li>server: 接收设备状态、设备执行指令结果，下发指令给设备  </li>
+</ul>
+<p>MDM Server 通过 APNS 发送推送消息给设备，设备会请求 MDM Server 上报自己的状态，如 Idle 表示设备处于空闲状态。</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;
+&lt;plist version=&quot;1.0&quot;&gt;
+&lt;dict&gt;
+    &lt;key&gt;Status&lt;/key&gt;
+    &lt;string&gt;Idle&lt;/string&gt;
+    &lt;key&gt;UDID&lt;/key&gt;
+    &lt;string&gt;【设备的udid】&lt;/string&gt;
+&lt;/dict&gt;
+&lt;/plist&gt;
+</code></pre><p>MDM Server 把需要设备执行的指令放在 response 里面下发给设备执行。</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;
+&lt;plist version=&quot;1.0&quot;&gt;
+&lt;dict&gt;
+    &lt;key&gt;CommandUUID&lt;/key&gt;
+    &lt;string&gt;eba2a485-c5f7-4135-87e8-b36ea72a507d&lt;/string&gt;
+    &lt;key&gt;Command&lt;/key&gt;
+    &lt;dict&gt;
+        &lt;key&gt;RequestType&lt;/key&gt;
+        &lt;string&gt;InstalledApplicationList&lt;/string&gt;
+    &lt;/dict&gt;
+&lt;/dict&gt;
+&lt;/plist&gt;
+</code></pre><p>设备完成指令执行后，会再次请求 MDM Server，将执行结果告诉我们，我们可以通过 CommandUUID 字段，来区分设备的这个请求对应的是哪一条指令的执行结果，同时我们可以把下一条需要设备执行的指令放到 response 里面去下发给设备。</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;
+&lt;plist version=&quot;1.0&quot;&gt;
+&lt;dict&gt;
+        &lt;key&gt;CommandUUID&lt;/key&gt;
+        &lt;string&gt;eba2a485-c5f7-4135-87e8-b36ea72a507d&lt;/string&gt;
+        &lt;key&gt;InstalledApplicationList&lt;/key&gt;
+        &lt;array/&gt;
+        &lt;key&gt;Status&lt;/key&gt;
+        &lt;string&gt;Acknowledged&lt;/string&gt;
+        &lt;key&gt;UDID&lt;/key&gt;
+        &lt;string&gt;【设备的udid】&lt;/string&gt;
+&lt;/dict&gt;
+&lt;/plist&gt;
+</code></pre><h3 id="一些小-Tips"><a href="#一些小-Tips" class="headerlink" title="一些小 Tips"></a>一些小 Tips</h3><h6 id="如何区分-check-in-的设备是属于谁的"><a href="#如何区分-check-in-的设备是属于谁的" class="headerlink" title="如何区分 check in 的设备是属于谁的"></a>如何区分 check in 的设备是属于谁的</h6><p>两个方法，</p>
+<ol>
+<li>可以在 mobileconfig 文件的 check in url 等字段上加上 query 参数，如?accountId=1，然后就可以取出业务上无需要的用户信息了。</li>
+<li>check in 的时候，会带上 Topic 字段，可以将其和上传的 Push 证书的 Common 字段对比。</li>
+</ol>
+<h6 id="设备身份证书有什么作用"><a href="#设备身份证书有什么作用" class="headerlink" title="设备身份证书有什么作用"></a>设备身份证书有什么作用</h6><p>设备每次请求 MDM Server 都会带上设备身份证书，服务器可以开启 2-way SSL，来对请求的证书进行验证。</p>
+<h6 id="App-如何判断设备-enroll-的状态（是否受-MDM-管理，是否移除-MDM-管理）"><a href="#App-如何判断设备-enroll-的状态（是否受-MDM-管理，是否移除-MDM-管理）" class="headerlink" title="App 如何判断设备 enroll 的状态（是否受 MDM 管理，是否移除 MDM 管理）"></a>App 如何判断设备 enroll 的状态（是否受 MDM 管理，是否移除 MDM 管理）</h6><p>可以通过给 App 推送配置的方式进行，通过 Configuration 这个命令，给设备的某个 App 推送一个配置，当设备处于 enrolled 状态的时候，此配置可读，当设备 checkout 后，此配置会被清除。</p>
+<p>（完）</p>
 
       
     </div>
@@ -503,8 +509,8 @@ if (!loading) {
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/flutter-vs-reactnative/" rel="next" title="Flutter VS React Native">
-                <i class="fa fa-chevron-left"></i> Flutter VS React Native
+              <a href="/list_p12_keytool/" rel="next" title="使用keytool解析p12证书">
+                <i class="fa fa-chevron-left"></i> 使用keytool解析p12证书
               </a>
             
           </div>
@@ -512,10 +518,6 @@ if (!loading) {
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/hexo-admin-mime-not-supported/" rel="prev" title="hexo-admin MIMI type ('text/html') is not supported 解决方案">
-                hexo-admin MIMI type ('text/html') is not supported 解决方案 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -569,8 +571,17 @@ if (!loading) {
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -665,6 +676,22 @@ if (!loading) {
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#MDM-Vendor"><span class="nav-number">1.</span> <span class="nav-text">MDM Vendor</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MDM-Customer"><span class="nav-number">2.</span> <span class="nav-text">MDM Customer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MDM-涉及到的证书"><span class="nav-number">3.</span> <span class="nav-text">MDM 涉及到的证书</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MDM-描述文件"><span class="nav-number">4.</span> <span class="nav-text">MDM 描述文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#设备身份证书"><span class="nav-number">4.1.</span> <span class="nav-text">设备身份证书</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MDM-payload"><span class="nav-number">4.2.</span> <span class="nav-text">MDM payload</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Supervisor-Mode"><span class="nav-number">5.</span> <span class="nav-text">Supervisor Mode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MDM-通信流程"><span class="nav-number">6.</span> <span class="nav-text">MDM 通信流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一些小-Tips"><span class="nav-number">7.</span> <span class="nav-text">一些小 Tips</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#如何区分-check-in-的设备是属于谁的"><span class="nav-number">7.0.0.1.</span> <span class="nav-text">如何区分 check in 的设备是属于谁的</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#设备身份证书有什么作用"><span class="nav-number">7.0.0.2.</span> <span class="nav-text">设备身份证书有什么作用</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#App-如何判断设备-enroll-的状态（是否受-MDM-管理，是否移除-MDM-管理）"><span class="nav-number">7.0.0.3.</span> <span class="nav-text">App 如何判断设备 enroll 的状态（是否受 MDM 管理，是否移除 MDM 管理）</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
